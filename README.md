@@ -2,6 +2,7 @@
 
 Utilize LIDAR and RADAR data for pedestrian tracking based on the Kalman Filter framework.
 
+---
 
 ## Code & Files
 ### 1. Dependencies & environment
@@ -41,10 +42,7 @@ Utilize LIDAR and RADAR data for pedestrian tracking based on the Kalman Filter 
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make` 
    * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
-4. Run it: `./ExtendedKF path/to/input.txt path/to/output.txt`. You can find
-   some sample inputs in 'data/'.
-    - eg. `./ExtendedKF ../data/obj_pose-laser-radar-synthetic-input.txt`
-
+4. Run it: `./ExtendedKF`. 
 
 ## Release History
 
