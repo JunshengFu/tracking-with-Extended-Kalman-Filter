@@ -44,10 +44,13 @@ Utilize LIDAR and RADAR data for pedestrian tracking based on the Kalman Filter 
    * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
 4. Run it: `./ExtendedKF`. 
 
+---
+
 ## Release History
 
 
 * 0.1.0
     * Initiate the repo and add the functionality of pedestrian trakcing with lidar data.
     * Date 28 April 2017
+
 
