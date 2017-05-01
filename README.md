@@ -1,6 +1,6 @@
 # **Pedestrian Tracking with Kalman Filter**
 
-Utilize LIDAR and RADAR data for pedestrian tracking based on the Kalman Filter framework.
+Utilize fused data from both LIDAR and RADAR sensors for pedestrian tracking based on the Extended Kalman Filter framework.
 
 ---
 
@@ -42,12 +42,15 @@ Utilize LIDAR and RADAR data for pedestrian tracking based on the Kalman Filter 
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make` 
    * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
-4. Run it: `./ExtendedKF`. 
+4. Run it: `./ExtendedKF  ../data/obj_pose-laser-radar-synthetic-input.txt ./output.txt`. 
 
 ---
 
 ## Release History
 
+* 0.1.1
+    * First proper release
+    * Date 1 May 2017
 
 * 0.1.0
     * Initiate the repo and add the functionality of pedestrian trakcing with lidar data.
