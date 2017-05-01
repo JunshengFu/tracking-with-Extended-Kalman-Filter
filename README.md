@@ -42,7 +42,9 @@ Utilize fused data from both LIDAR and RADAR sensors for pedestrian tracking bas
 2. Make a build directory: `mkdir build && cd build`
 3. Compile: `cmake .. && make` 
    * On windows, you may need to run: `cmake .. -G "Unix Makefiles" && make`
-4. Run it: `./ExtendedKF  ../data/obj_pose-laser-radar-synthetic-input.txt ./output.txt`. 
+4. Run it by either of the following commands: 
+   * `./ExtendedKF  ../data/obj_pose-laser-radar-synthetic-input.txt ./output.txt`
+   * `./ExtendedKF  ../data/sample-laser-radar-measurement-data-1.txt ./output.txt`
 
 ---
 
