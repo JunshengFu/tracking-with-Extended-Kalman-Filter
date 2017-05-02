@@ -1,8 +1,24 @@
-# **Ojbect Tracking with Kalman Filter**
+# **Object Tracking with Sensor Fusion-based Extended Kalman Filter**
 
-Utilize fused data from both LIDAR and RADAR sensors for pedestrian tracking based on the Extended Kalman Filter framework.
+Utilize sensor data from both LIDAR and RADAR measurements for object (e.g. pedestrian, vehicles, or other moving objects) 
+tracking with the Extended Kalman Filter.
 
-### [video](https://youtu.be/XswKMtQBTCo)
+### **Tracking with both LIDAR and RADAR measurements**
+[![gif_demo2][demo1_gif]](https://www.youtube.com/watch?v=XswKMtQBTCo)
+
+In this demo, the blue car is the object to be tracked, but the tracked object can be any types, e.g. 
+pedestrian, vehicles, or other moving objects. We continuously got both Lidar (**red circle**) and Radar (**blue circle**) 
+measurements of the car's location in the defined coordinate, but there might be noise and errors 
+in the data. Also, we need to find a way to fuse the two types of sensor measurements to estimate 
+the proper location of the tracked object.
+
+Therefore, we use Extended Kalman Filter to compute the estimated location (green triangle) of the blue car. 
+The estimated trajectory (**green triangle**) is compared with the ground true trajectory of the blue car, and 
+the error is displayed in RMSE format in real time.
+
+In autonomous driving case, the self-driving cars obtian both Lidar and radar sensors measurements of objects
+to be tracked, and then apply the Extended Kalman Filter to track the objects based on the two types
+ of sensor data.
 
 ---
 
@@ -53,6 +69,10 @@ Utilize fused data from both LIDAR and RADAR sensors for pedestrian tracking bas
 
 ## Release History
 
+* 0.2.1
+    * Docs: Add a sample video for vehicle tracking
+    * Date 3 May 2017
+
 * 0.2.0
     * Fix: Normalize the angle for EKF updates with Radar
     * Fix: Initialize several variables
@@ -67,3 +87,7 @@ Utilize fused data from both LIDAR and RADAR sensors for pedestrian tracking bas
     * Date 28 April 2017
 
 
+
+[//]: # (Image References)
+[image1]: ./examples/car_not_car.png
+[demo1_gif]: ./data/sample.gif
