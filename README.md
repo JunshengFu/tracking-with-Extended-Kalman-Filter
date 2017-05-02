@@ -1,8 +1,11 @@
-# **Pedestrian Tracking with Kalman Filter**
+# **Ojbect Tracking with Kalman Filter**
 
 Utilize fused data from both LIDAR and RADAR sensors for pedestrian tracking based on the Extended Kalman Filter framework.
 
+### [video](https://youtu.be/XswKMtQBTCo)
+
 ---
+
 
 ## Code & Files
 ### 1. Dependencies & environment
