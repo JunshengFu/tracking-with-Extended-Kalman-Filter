@@ -1,7 +1,10 @@
+#include <math.h>
 #include "kalman_filter.h"
 
 using Eigen::MatrixXd;
 using Eigen::VectorXd;
+
+const float PI2 = 2 * M_PI;
 
 KalmanFilter::KalmanFilter() {}
 
@@ -86,9 +89,18 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
 
   // convert radar measurements from cartesian coordinates (x, y, vx, vy) to polar (rho, phi, rho_dot).
   VectorXd z_pred = RadarCartesianToPolar(x_);
+  VectorXd y = z - z_pred;
+
+
+  while(y(1) > M_PI){
+    y(1) -= PI2;
+  }
+
+  while(y(1) < -M_PI){
+    y(1) += PI2;
+  }
 
   // following is exact the same as in the function of KalmanFilter::Update()
-  VectorXd y = z - z_pred;
   MatrixXd Ht = H_.transpose();
   MatrixXd PHt = P_ * Ht;
   MatrixXd S = H_ * PHt + R_;
