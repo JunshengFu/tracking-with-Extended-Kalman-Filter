@@ -91,7 +91,7 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
   VectorXd z_pred = RadarCartesianToPolar(x_);
   VectorXd y = z - z_pred;
 
-
+  // normalize the angle between -pi to pi
   while(y(1) > M_PI){
     y(1) -= PI2;
   }
