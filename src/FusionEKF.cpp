@@ -81,7 +81,6 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
     // first measurement
 //    cout << "EKF: " << endl;
     ekf_.x_ = VectorXd(4);
-//    ekf_.x_ << 1, 1, 1, 1;
 
     if (measurement_pack.sensor_type_ == MeasurementPackage::RADAR) {
       /**
@@ -91,7 +90,10 @@ void FusionEKF::ProcessMeasurement(const MeasurementPackage &measurement_pack) {
       float rho = measurement_pack.raw_measurements_[0];      // range: radial distance from origin
       float phi = measurement_pack.raw_measurements_[1];      // bearing: angle between rho and x axis
       float rho_dot = measurement_pack.raw_measurements_[2];  // radial velocity: change of rho
-      ekf_.x_ << rho * cos(phi), rho * sin(phi), rho_dot * cos(phi), rho_dot * sin(phi);  // x, y, vx, vy
+
+      // ekf_.x_ << rho * cos(phi), rho * sin(phi), rho_dot * cos(phi), rho_dot * sin(phi);
+      // phi is not the direction of the speed, it is better to set vx and vy to 0
+      ekf_.x_ << rho * cos(phi), rho * sin(phi), 0, 0;  // x, y, vx, vy
 
 
     }
