@@ -50,6 +50,11 @@ Utilize fused data from both LIDAR and RADAR sensors for pedestrian tracking bas
 
 ## Release History
 
+* 0.2.0
+    * Fix: Normalize the angle for EKF updates with Radar
+    * Fix: Initialize several variables
+    * Date 2 May 2017
+
 * 0.1.1
     * First proper release
     * Date 1 May 2017
