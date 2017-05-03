@@ -118,5 +118,5 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 [//]: # (Image References)
 [image1]: ./examples/car_not_car.png
 [radar_gif]: ./data/radar.gif
-[lidar_gif]: ./data/radar.gif
+[lidar_gif]: ./data/lidar.gif
 [both_gif]: ./data/both_lidar_radar.gif
