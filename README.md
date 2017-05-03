@@ -4,7 +4,10 @@
 Utilize sensor data from both LIDAR and RADAR measurements for object (e.g. pedestrian, vehicles, or other moving objects) 
 tracking with the Extended Kalman Filter.
 
-### **Demo 1: Tracking with both LIDAR and RADAR measurements**
+### **Demo: Object tracking with both LIDAR and RADAR measurements**
+
+[![gif_demo1][both_gif]](https://www.youtube.com/watch?v=XswKMtQBTCo)
+
 In this demo, the blue car is the object to be tracked, but the tracked object can be any types, e.g. 
 pedestrian, vehicles, or other moving objects. We continuously got both LIDAR (**red circle**) and RADAR (**blue circle**) 
 measurements of the car's location in the defined coordinate, but there might be noise and errors 
@@ -18,48 +21,7 @@ the error is displayed in RMSE format in real time.
 In autonomous driving case, the self-driving cars obtian both Lidar and radar sensors measurements of objects
 to be tracked, and then apply the Extended Kalman Filter to track the objects based on the two types
  of sensor data.
-
-[![gif_demo1][both_gif]](https://www.youtube.com/watch?v=XswKMtQBTCo)
-
  
-
-### **Demo 2: Tracking with only LIDAR measurements**
-
-In this demo, only LIDAR measurements are used for the object tracking. 
- 
-![gif_demo2][lidar_gif]
-
-
-
-### **Demo 3：Tracking with only RADAR measurements**
-
-In this demo, only RADAR measurements are used for the object tracking.
-are more noisy than the LIDAR measurements.
-
-![gif_demo3][radar_gif]
-
-
-
-#### From these three Demos, we could see that 
-* RADAR measurements are tend to be more more noisy than the LIDAR measurements.
-* Extended Kalman Filter tracking by utilizing both measurements from both LIDAR and RADAR can reduce the noise/errors 
-from the sensor measurements, and provide the robust estimations of the tracked object locations.   
-
-**_Note_**: the advantage of RADAR is that it can estimate the object speed directly by 
-[Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
-
-
-
-### **Comparison of tracking results** with different sensor data can be seen from [this video](https://www.youtube.com/watch?v=vQHsg8k4tLI)
-
-[![][image1]](https://www.youtube.com/watch?v=vQHsg8k4tLI)
-
-Compared the tracking results of Extended Kalman Filter with measurements from (1) only lidar, (2) only radar (3) both lidar and radar.  
-* Left-up: ground true
-* Left-down: radar only
-* Right-up: lidar+radar
-* Right-down: lidar only.
-
 
 ---
 
@@ -108,7 +70,7 @@ Compared the tracking results of Extended Kalman Filter with measurements from (
 
 ---
 
-## Release History
+### 5. Release History
 
 * 0.2.1
     * Docs: Add a sample video for vehicle tracking
@@ -127,10 +89,64 @@ Compared the tracking results of Extended Kalman Filter with measurements from (
     * Initiate the repo and add the functionality of pedestrian trakcing with lidar data.
     * Date 28 April 2017
 
+---
+
+## System in details
+
+### 1. Demos
+
+### **Demo 1: Tracking with both LIDAR and RADAR measurements**
+In this demo, both LIDAR and RADAR measurements are used for object tracking.
+
+[![gif_demo1][both_gif]](https://www.youtube.com/watch?v=XswKMtQBTCo)
+
+ 
+
+### **Demo 2: Tracking with only LIDAR measurements**
+
+In this demo, only LIDAR measurements are used for the object tracking. 
+ 
+![gif_demo2][lidar_gif]
+
+
+
+### **Demo 3：Tracking with only RADAR measurements**
+
+In this demo, only RADAR measurements are used for the object tracking.
+are more noisy than the LIDAR measurements.
+
+![gif_demo3][radar_gif]
+
+
+
+#### From these three Demos, we could see that 
+
+* RADAR measurements are tend to be more more noisy than the LIDAR measurements.
+* Extended Kalman Filter tracking by utilizing both measurements from both LIDAR and RADAR can reduce the noise/errors 
+from the sensor measurements, and provide the robust estimations of the tracked object locations.   
+
+**_Note_**: the advantage of RADAR is that it can estimate the object speed directly by 
+[Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
+
+
+### 2. How does the Extended Kalman Filter Work
+
+
+![][image2]
+
+
+### 3. Extended Kalman Filter V.S. Kalman Filter
+
+
+![][image3]
+
+
 
 
 [//]: # (Image References)
 [image1]: ./data/ekf_combine.png
+[image2]: ./data/ekf_flow.jpg
+[image3]: ./data/ekf_vs_kf.jpg
 [radar_gif]: ./data/radar.gif
 [lidar_gif]: ./data/lidar.gif
 [both_gif]: ./data/both_lidar_radar.gif
