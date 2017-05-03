@@ -83,7 +83,6 @@ VectorXd RadarCartesianToPolar(const VectorXd &x_state){
 
 void KalmanFilter::UpdateEKF(const VectorXd &z) {
   /**
-  TODO:
     * update the state by using Extended Kalman Filter equations
   */
 
