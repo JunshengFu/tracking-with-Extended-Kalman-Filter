@@ -1,24 +1,51 @@
 # **Object Tracking with Sensor Fusion-based Extended Kalman Filter**
 
+### Objective
 Utilize sensor data from both LIDAR and RADAR measurements for object (e.g. pedestrian, vehicles, or other moving objects) 
 tracking with the Extended Kalman Filter.
 
-### **Tracking with both LIDAR and RADAR measurements**
-[![gif_demo2][demo1_gif]](https://www.youtube.com/watch?v=XswKMtQBTCo)
-
+### **Demo 1: Tracking with both LIDAR and RADAR measurements**
 In this demo, the blue car is the object to be tracked, but the tracked object can be any types, e.g. 
-pedestrian, vehicles, or other moving objects. We continuously got both Lidar (**red circle**) and Radar (**blue circle**) 
+pedestrian, vehicles, or other moving objects. We continuously got both LIDAR (**red circle**) and RADAR (**blue circle**) 
 measurements of the car's location in the defined coordinate, but there might be noise and errors 
 in the data. Also, we need to find a way to fuse the two types of sensor measurements to estimate 
 the proper location of the tracked object.
 
-Therefore, we use Extended Kalman Filter to compute the estimated location (green triangle) of the blue car. 
+Therefore, we use Extended Kalman Filter to compute the estimated location (**green triangle**) of the blue car. 
 The estimated trajectory (**green triangle**) is compared with the ground true trajectory of the blue car, and 
 the error is displayed in RMSE format in real time.
 
 In autonomous driving case, the self-driving cars obtian both Lidar and radar sensors measurements of objects
 to be tracked, and then apply the Extended Kalman Filter to track the objects based on the two types
  of sensor data.
+
+[![gif_demo1][both_gif]](https://www.youtube.com/watch?v=XswKMtQBTCo)
+
+ 
+
+### **Demo 2: Tracking with only LIDAR measurements**
+
+In this demo, only LIDAR measurements are used for the object tracking.  
+[![gif_demo2][lidar_gif]]
+
+
+
+### **Demo 3：Tracking with only RADAR measurements**
+
+In this demo, only RADAR measurements are used for the object tracking.
+are more noisy than the LIDAR measurements.
+[![gif_demo3][radar_gif]]
+
+
+
+
+#### From these three Demos, we could see that 
+* RADAR measurements are tend to be more more noisy than the LIDAR measurements.
+* Extended Kalman Filter tracking by utilizing both measurements from both LIDAR and RADAR can reduce the noise/errors 
+from the sensor measurements, and provide the robust estimations of the tracked object locations.   
+
+**_Note_**: the advantage of RADAR is that it can estimate the object speed directly by 
+[Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
 
 ---
 
@@ -90,4 +117,6 @@ to be tracked, and then apply the Extended Kalman Filter to track the objects ba
 
 [//]: # (Image References)
 [image1]: ./examples/car_not_car.png
-[demo1_gif]: ./data/sample.gif
+[radar_gif]: ./data/radar.gif
+[lidar_gif]: ./data/radar.gif
+[both_gif]: ./data/both_lidar_radar.gif
