@@ -40,7 +40,6 @@ are more noisy than the LIDAR measurements.
 
 
 
-
 #### From these three Demos, we could see that 
 * RADAR measurements are tend to be more more noisy than the LIDAR measurements.
 * Extended Kalman Filter tracking by utilizing both measurements from both LIDAR and RADAR can reduce the noise/errors 
@@ -48,6 +47,19 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 
 **_Note_**: the advantage of RADAR is that it can estimate the object speed directly by 
 [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
+
+
+
+#### Comparison of tracking results with different sensor data can be seen from [this video](https://www.youtube.com/watch?v=vQHsg8k4tLI)
+
+[![][image1]](https://www.youtube.com/watch?v=vQHsg8k4tLI)
+
+Compared the tracking results of Extended Kalman Filter with measurements from (1) only lidar, (2) only radar (3) both lidar and radar.  
+* Left-up: ground true
+* Left-down: radar only
+* Right-up: lidar+radar
+* Right-down: lidar only.
+
 
 ---
 
@@ -118,7 +130,7 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 
 
 [//]: # (Image References)
-[image1]: ./examples/car_not_car.png
+[image1]: ./data/ekf_combine.png
 [radar_gif]: ./data/radar.gif
 [lidar_gif]: ./data/lidar.gif
 [both_gif]: ./data/both_lidar_radar.gif
