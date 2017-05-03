@@ -26,7 +26,7 @@ to be tracked, and then apply the Extended Kalman Filter to track the objects ba
 ### **Demo 2: Tracking with only LIDAR measurements**
 
 In this demo, only LIDAR measurements are used for the object tracking.  
-[![gif_demo2][lidar_gif]]
+![gif_demo2][lidar_gif]
 
 
 
@@ -34,7 +34,7 @@ In this demo, only LIDAR measurements are used for the object tracking.
 
 In this demo, only RADAR measurements are used for the object tracking.
 are more noisy than the LIDAR measurements.
-[![gif_demo3][radar_gif]]
+![gif_demo3][radar_gif]
 
 
 
