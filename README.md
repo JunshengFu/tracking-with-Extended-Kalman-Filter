@@ -50,7 +50,7 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 
 
 
-#### Comparison of tracking results with different sensor data can be seen from [this video](https://www.youtube.com/watch?v=vQHsg8k4tLI)
+### **Comparison of tracking results** with different sensor data can be seen from [this video](https://www.youtube.com/watch?v=vQHsg8k4tLI)
 
 [![][image1]](https://www.youtube.com/watch?v=vQHsg8k4tLI)
 
