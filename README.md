@@ -129,13 +129,21 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 [Doppler effect](https://en.wikipedia.org/wiki/Doppler_effect).
 
 
-### 2. How does the Extended Kalman Filter Work
+### 2. How does LIDAR measurement look like
+
+![][image4]
+
+### 3. How does RADAR measurement look like
+
+![][image5]
+
+### 4. How does the Extended Kalman Filter Work
 
 
 ![][image2]
 
 
-### 3. Extended Kalman Filter V.S. Kalman Filter
+### 5. Extended Kalman Filter V.S. Kalman Filter
 
 
 ![][image3]
@@ -147,6 +155,8 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 [image1]: ./data/ekf_combine.png
 [image2]: ./data/ekf_flow.jpg
 [image3]: ./data/ekf_vs_kf.jpg
+[image4]: ./data/lidar.jpg
+[image5]: ./data/radar.jpg
 [radar_gif]: ./data/radar.gif
 [lidar_gif]: ./data/lidar.gif
 [both_gif]: ./data/both_lidar_radar.gif
