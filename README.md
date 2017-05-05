@@ -137,13 +137,35 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 
 ![][image5]
 
-### 4. How does the Extended Kalman Filter Work
+### 4. Comparison of LIDAR, RADAR and Camera
+
+|            Sensor type           |  LIDAR |    RADAR  |   Camera   |
+|:--------------------------------:|:------:|:---------:|:----------:|
+|            Resolution            | median |  low      |  **high**  |
+|      Direct velocity measure     |   no   |  **yes**  |     no     |
+|            All-weather           |   bad  |  **good** |     bad    |
+|            Sensor size           |  large | **small** |  **small** |
+| sense non-line of  sight object  |   no   |  **yes**  |     no     |
+
+
+**_Note_**:
+
+* LIDAR wavelength in infrared; RADAR wavelength in mm. 
+* LIDAR most affected by dirt and small debris.
+
+
+One comparison Figure from _**another aspect**_.
+
+![][image6]
+
+
+### 5. How does the Extended Kalman Filter Work
 
 
 ![][image2]
 
 
-### 5. Extended Kalman Filter V.S. Kalman Filter
+### 4. Extended Kalman Filter V.S. Kalman Filter
 
 
 ![][image3]
@@ -157,6 +179,7 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 [image3]: ./data/ekf_vs_kf.jpg
 [image4]: ./data/lidar.jpg
 [image5]: ./data/radar.jpg
+[image6]: ./data/camera-vs-radar-vs-lidar_1.png
 [radar_gif]: ./data/radar.gif
 [lidar_gif]: ./data/lidar.gif
 [both_gif]: ./data/both_lidar_radar.gif
