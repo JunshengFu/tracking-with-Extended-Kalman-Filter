@@ -68,7 +68,6 @@ to be tracked, and then apply the Extended Kalman Filter to track the objects ba
    * `./ExtendedKF  ../data/obj_pose-laser-radar-synthetic-input.txt ./output.txt`
    * `./ExtendedKF  ../data/sample-laser-radar-measurement-data-1.txt ./output.txt`
 
----
 
 ### 5. Release History
 
