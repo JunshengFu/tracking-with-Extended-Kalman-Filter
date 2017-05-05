@@ -133,6 +133,13 @@ from the sensor measurements, and provide the robust estimations of the tracked 
 
 ![][image4]
 
+The LIDAR will produce 3D measurement px,py,pz. But for the case of driving on the road, we could simplify the pose of 
+the tracked object as: px,py,and one rotation. In other words, we could only use px and px to indicate the position of 
+the object, and one rotation to indicate the orientation of the object. But in real world where you have very steep road, 
+you have to consider z axis as well. Also in application like airplane and drone, you definitely want to consider pz as well.
+
+
+
 ### 3. How does RADAR measurement look like
 
 ![][image5]
