@@ -177,6 +177,22 @@ One comparison Figure from _**another aspect**_.
 ![][image3]
 
 
+* _x_ is the mean state vector.
+* _F_ is the stae transition matrix.
+* _u_ is the external motion vector.
+* _P_ is the state covariance matrix, indicating the uncertainty of the object's state.
+* _Q_ is the process covariance matrix.
+
+* _H_ is the measurement matrix.
+* _z_ is the measurement.
+* _R_ is the measurement noise.
+* _I_ is the identity matrix.
+* _K_ is the Kalman filter gain.
+* _Hj_ and _Fj_ are the jacobian matrix.
+
+
+
+
 
 
 [//]: # (Image References)
