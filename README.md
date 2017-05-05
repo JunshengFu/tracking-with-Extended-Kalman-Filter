@@ -90,7 +90,7 @@ to be tracked, and then apply the Extended Kalman Filter to track the objects ba
 
 ---
 
-## System in details
+## System details
 
 ### 1. Demos
 
