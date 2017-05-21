@@ -190,6 +190,7 @@ One comparison Figure from _**another aspect**_.
 * _K_ is the Kalman filter gain.
 * _Hj_ and _Fj_ are the jacobian matrix.
 
+Note: extended Kalman filter uses the Jacobian matrix to linearize non-linear functions.
 
 
 
