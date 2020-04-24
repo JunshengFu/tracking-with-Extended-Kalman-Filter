@@ -185,8 +185,11 @@ One comparison Figure from _**another aspect**_.
 * _P_ is the state covariance matrix, indicating the uncertainty of the object's state.
 * _u_ is the process noise, which is a Gaussian with zero mean and covariance as Q.
 * _Q_ is the covariance matrix of the process noise.
+
 ---------------------------------------------------------
+
 * _y_ is the innovation term, i.e. the difference between the measurement and the prediction. In order to compute the innovation term, we transform the state to measurement space by measurement function, so that we can compare the measurement and prediction directly.
+* _S_ is the predicted covariance.
 * _H_ is the measurement function.
 * _z_ is the measurement.
 * _R_ is the covariance matrix of the measurement noise.
