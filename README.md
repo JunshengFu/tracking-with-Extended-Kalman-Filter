@@ -189,7 +189,7 @@ One comparison Figure from _**another aspect**_.
 ---------------------------------------------------------
 
 * _y_ is the innovation term, i.e. the difference between the measurement and the prediction. In order to compute the innovation term, we transform the state to measurement space by measurement function, so that we can compare the measurement and prediction directly.
-* _S_ is the predicted covariance.
+* _S_ is the predicted measurement covariance matrix, or named innovation covariance matrix.
 * _H_ is the measurement function.
 * _z_ is the measurement.
 * _R_ is the covariance matrix of the measurement noise.
