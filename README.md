@@ -186,6 +186,10 @@ One comparison Figure from _**another aspect**_.
 * _u_ is the process noise, which is a Gaussian with zero mean and covariance as Q.
 * _Q_ is the covariance matrix of the process noise.
 
+**For EKF**
+* To calculate predicted state vector _x′_, the prediction function _f(x)_, is used instead of the _F_ matrix.
+* The _F_ matrix will be replaced by _Fj_ (jocobian matrix of _f_) when calculating _P′_.
+
 ---------------------------------------------------------
 
 * _y_ is the innovation term, i.e. the difference between the measurement and the prediction. In order to compute the innovation term, we transform the state to measurement space by measurement function, so that we can compare the measurement and prediction directly.
@@ -196,6 +200,10 @@ One comparison Figure from _**another aspect**_.
 * _I_ is the identity matrix.
 * _K_ is the Kalman filter gain.
 * _Hj_ and _Fj_ are the jacobian matrix.
+
+**For EKF**
+* To calculate innovation _y_, the measurement function _h(x')_ is used instead of the _H_ matrix.
+* The _H_ matrix in the Kalman filter will be replaced by the _Hj_(Jacobian matrix of _h(x')_)when calculating _S_, _K_, and _P_.
 
 
 **All Kalman filters have the same three steps:**
