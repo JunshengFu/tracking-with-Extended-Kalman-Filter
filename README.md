@@ -1,4 +1,4 @@
-# **Object Tracking with Sensor Fusion-based Extended Kalman Filter**
+# **Object Tracking with Extended Kalman Filter**
 
 ### Objective
 Utilize sensor data from both LIDAR and RADAR measurements for object (e.g. pedestrian, vehicles, or other moving objects) 
