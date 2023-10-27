@@ -18,7 +18,7 @@ Therefore, we use Extended Kalman Filter to compute the estimated location (**gr
 The estimated trajectory (**green triangle**) is compared with the ground true trajectory of the blue car, and 
 the error is displayed in RMSE format in real time.
 
-In autonomous driving case, the self-driving cars obtian both Lidar and radar sensors measurements of objects
+In autonomous driving case, the self-driving cars obtain both Lidar and radar sensors measurements of objects
 to be tracked, and then apply the Extended Kalman Filter to track the objects based on the two types
  of sensor data.
  
@@ -88,7 +88,7 @@ and if you are viewing it in "github.io" you can be redirected by clicking the *
     * Date 1 May 2017
 
 * 0.1.0
-    * Initiate the repo and add the functionality of pedestrian trakcing with lidar data.
+    * Initiate the repo and add the functionality of pedestrian  tracking with lidar data.
     * Date 28 April 2017
 
 ---
